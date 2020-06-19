@@ -55,7 +55,7 @@ mailtoR <- function(email, text, subject = NULL, cc = NULL, bcc = NULL, body = N
   } else if (!is.null(subject) & is.null(cc) & is.null(bcc) & is.null(body)) {
 
 
-    subject <- stringr::str_replace_all(string = subject, pattern = " ", replacement = "%20")
+    subject <-  URLencode(subject)
 
     htmltools::a(class = "mailtoui", href = glue::glue("mailto:{toString(email)}?subject={toString(subject)}"), glue::glue("{text}"))
 
@@ -78,7 +78,7 @@ mailtoR <- function(email, text, subject = NULL, cc = NULL, bcc = NULL, body = N
   } else if (is.null(subject) & !is.null(cc) & is.null(bcc) & !is.null(body)){
 
 
-  body <- stringr::str_replace_all(string = body, pattern = " ", replacement = "%20")
+    body <-  URLencode(body)
 
 
 
@@ -89,9 +89,10 @@ mailtoR <- function(email, text, subject = NULL, cc = NULL, bcc = NULL, body = N
 
   } else {
 
-    body <- stringr::str_replace_all(string = body, pattern = " ", replacement = "%20")
+    body <-  URLencode(body)
 
-    subject <- stringr::str_replace_all(string = subject, pattern = " ", replacement = "%20")
+    subject <-  URLencode(subject)
+
 
     href <- glue::glue("mailto:{toString(email)}?subject={toString(subject)}&cc={toString(cc)}&bcc={toString(bcc)}&body={toString(body)}")
 
