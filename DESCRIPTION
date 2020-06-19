@@ -1,11 +1,12 @@
 Package: mailtoR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Creates a Friendly User Interface for Emails Sending in 'shiny'
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Mohamed El Fodil Ihaddaden
+Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
+Description: Allows the user to generate a friendly user interface for emails sending. 
+    The user can choose from the most popular free email services ('Gmail', 'Outlook', 'Yahoo') and his default email application. 
+    The package is a wrapper for the 'Mailtoui' 'JavaScript' library.  See <https://mailtoui.com/#menu> for more information. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
