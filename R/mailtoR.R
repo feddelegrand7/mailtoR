@@ -55,7 +55,7 @@ mailtoR <- function(email, text, subject = NULL, cc = NULL, bcc = NULL, body = N
   } else if (!is.null(subject) & is.null(cc) & is.null(bcc) & is.null(body)) {
 
 
-    subject <-  URLencode(subject)
+    subject <-  utils::URLencode(subject)
 
     htmltools::a(class = "mailtoui", href = glue::glue("mailto:{toString(email)}?subject={toString(subject)}"), glue::glue("{text}"))
 
@@ -78,7 +78,7 @@ mailtoR <- function(email, text, subject = NULL, cc = NULL, bcc = NULL, body = N
   } else if (is.null(subject) & !is.null(cc) & is.null(bcc) & !is.null(body)){
 
 
-    body <-  URLencode(body)
+    body <-  utils::URLencode(body)
 
 
 
@@ -89,9 +89,9 @@ mailtoR <- function(email, text, subject = NULL, cc = NULL, bcc = NULL, body = N
 
   } else {
 
-    body <-  URLencode(body)
+    body <-  utils::URLencode(body)
 
-    subject <-  URLencode(subject)
+    subject <-  utils::URLencode(subject)
 
 
     href <- glue::glue("mailto:{toString(email)}?subject={toString(subject)}&cc={toString(cc)}&bcc={toString(bcc)}&body={toString(body)}")

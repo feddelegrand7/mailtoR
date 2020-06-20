@@ -90,10 +90,9 @@ shinyApp(ui = ui, server = server)
 
 ![](man/figures/mailtoRexample2.gif)
 
-Using the
-[glue](https://cran.r-project.org/web/packages/glue/index.html) package,
-you can ever create a reproducible text report that you’ll embed within
-your email:
+Using the [glue](https://CRAN.R-project.org/package=glue) package, you
+can ever create a reproducible text report that you’ll embed within your
+email:
 
 ``` r
 
