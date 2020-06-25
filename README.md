@@ -5,6 +5,11 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/mailtoR)](https://CRAN.R-project.org/package=mailtoR)
+
+![](http://cranlogs.r-pkg.org/badges/grand-total/mailtoR?color=blue)
+
 <!-- badges: end -->
 
 The goal of `mailtoR` is to implement a user interface for emails
