@@ -18,6 +18,14 @@ sending within your Shiny application. It’s a wrapper for the
 
 ## Installation
 
+You can install the `mailtoR` package from
+[CRAN](https://CRAN.R-project.org/package=mailtoR) with:
+
+``` r
+
+install.packages("mailtoR")
+```
+
 You can install the development version of `mailtoR` from Github with:
 
 ``` r

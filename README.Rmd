@@ -28,6 +28,17 @@ The goal of `mailtoR` is to implement a user interface for emails sending within
 
 ## Installation
 
+You can install the `mailtoR` package from [CRAN](https://CRAN.R-project.org/package=mailtoR) with: 
+
+
+```{r, eval=FALSE}
+
+install.packages("mailtoR")
+
+```
+
+
+
 You can install the development version of `mailtoR` from Github with: 
 
 ```{r, eval=FALSE}
