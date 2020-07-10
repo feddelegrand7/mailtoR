@@ -2,7 +2,9 @@ Package: mailtoR
 Type: Package
 Title: Creates a Friendly User Interface for Emails Sending in 'shiny'
 Version: 0.1.0
-Author: Mohamed El Fodil Ihaddaden
+Authors@R: c(
+    person("Mohamed El Fodil", "Ihaddaden", email = "ihaddaden.fodeil@gmail.com", role = c("aut", "cre")),
+    person("Mario", "Rodriguez", role = c("ctb", "cph"), comment = "mailtoui.js library developer")) 
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
 Description: Allows the user to generate a friendly user interface for emails sending. 
     The user can choose from the most popular free email services ('Gmail', 'Outlook', 'Yahoo') and his default email application. 

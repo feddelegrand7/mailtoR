@@ -1,6 +1,12 @@
+The mailtoR package is distributed under MIT License. 
+
+The mailtoR package relies on the mailtoui.js library which is also distributed under MIT License. 
+
+
+
 # MIT License
 
-Copyright (c) 2020 Mohamed El Fodil Ihaddaden
+Copyright (c) 2020 Mohamed El Fodil Ihaddaden, Mario Rodriguez
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
