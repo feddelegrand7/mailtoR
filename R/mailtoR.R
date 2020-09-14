@@ -86,7 +86,6 @@ mailtoR <- function(email, text, subject = NULL, cc = NULL, bcc = NULL, body = N
 
 
 
-
   } else {
 
     body <-  utils::URLencode(body)

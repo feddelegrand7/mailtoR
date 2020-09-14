@@ -35,7 +35,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-The goal of `mailtoR` is to implement a user interface for emails sending within your Shiny application. It's a wrapper for the [Mailtoui](https://mailtoui.com/#menu) JavaScript library. 
+The goal of `mailtoR` is to implement a personalized user interface for emails sending within your Shiny applications and/or RMarkdown documents. It's a wrapper of the [Mailtoui](https://mailtoui.com/#menu) JavaScript library. 
 
 ## Installation
 
@@ -71,6 +71,9 @@ The `mailtoR` package is composed of two functions:
 + `use_mailtoR()`: put this function __at the end of your Shiny ui__, it activates the features of the [Mailtoui](https://mailtoui.com/#menu) library;
 
 + `mailtoR()`: use this function to create as many email links as you want (see examples below)
+
+
+#### The following examples are provided in Shiny coding however the principles remain the same for RMarkdown documents.
 
 
 ## Examples: 
