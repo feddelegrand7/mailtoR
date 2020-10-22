@@ -6,3 +6,6 @@
 ^cran-comments\.md$
 ^CRAN-RELEASE$
 ^\.travis\.yml$
+^man/figures/mailtoRexample1\.gif$
+^man/figures/mailtoRexample2\.gif$
+^man/figures/mailtoRexample3\.gif$
