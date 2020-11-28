@@ -53,7 +53,7 @@ remotes::install_github("feddelegrand7/mailtoR")
 
 The `mailtoR` package is composed of two functions:
 
-  - `use_mailtoR()`: put this function **at the end of your Shiny ui**,
+  - `use_mailtoR()`: put this function **at the end of your Shiny ui** (doesn't matter in RMarkdown),
     it activates the features of the
     [Mailtoui](https://mailtoui.com/#menu) library;
 
