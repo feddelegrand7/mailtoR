@@ -21,13 +21,14 @@ downloads](https://cranlogs.r-pkg.org/badges/grand-total/mailtoR)](https://cran.
 status](https://travis-ci.com/feddelegrand7/mailtoR.svg?branch=master)](https://travis-ci.com/feddelegrand7/mailtoR)
 
 [![R
-badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-blue)](https://github.com/feddelegrand7/mailtoR)
+badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-pink)](https://github.com/feddelegrand7/mailtoR)
 
 <!-- badges: end -->
 
-The goal of `mailtoR` is to implement a user interface for emails
-sending within your Shiny application. It’s a wrapper for the
-[Mailtoui](https://mailtoui.com/#menu) JavaScript library.
+The goal of `mailtoR` is to implement a personalized user interface for
+emails sending within your Shiny applications and/or RMarkdown
+documents. It’s a wrapper of the [Mailtoui](https://mailtoui.com/#menu)
+JavaScript library.
 
 ## Installation
 
@@ -58,6 +59,8 @@ The `mailtoR` package is composed of two functions:
 
   - `mailtoR()`: use this function to create as many email links as you
     want (see examples below)
+
+#### The following examples are provided in Shiny coding however the principles remain the same for RMarkdown documents.
 
 ## Examples:
 
@@ -159,6 +162,59 @@ shinyApp(ui = ui, server = server)
 ```
 
 ![](man/figures/mailtoRexample3.gif)
+
+If you want to send a vector of data you’ll need to use `mailtoR` in
+conjunction with the `jsonlite` package.
+
+``` r
+
+library(shiny)
+library(mailtoR)
+library(jsonlite)
+
+
+# converting our data to JSON format
+
+vec <- toJSON(mtcars$mpg)
+
+# reformat our results to make it prettier 
+
+vec_pretty <- prettify(vec)
+
+
+ui <- fluidPage(
+
+  mailtoR(email = "random_person@random.org",
+          text = "click here to send an email", 
+          subject = "Useful Information", 
+          body = glue::glue(
+          
+          "
+Hi,
+          
+
+Below you'll find the mpg column of the mtcars data frame: 
+
+{vec_pretty}
+
+Best regards
+            
+            "
+            
+          )),
+
+
+  use_mailtoR()
+
+
+)
+
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
+```
+
+![](man/figures/mailtoRexample4.gif)
 
 ## Code of Conduct
 

@@ -187,6 +187,66 @@ shinyApp(ui = ui, server = server)
 
 ![](man/figures/mailtoRexample3.gif)
 
+If you want to send a vector of data you'll need to use `mailtoR` in conjunction with the `jsonlite` package. 
+
+
+
+
+```{r, eval=FALSE}
+
+library(shiny)
+library(mailtoR)
+library(jsonlite)
+
+
+# converting our data to JSON format
+
+vec <- toJSON(mtcars$mpg)
+
+# reformat our results to make it prettier 
+
+vec_pretty <- prettify(vec)
+
+
+ui <- fluidPage(
+
+  mailtoR(email = "random_person@random.org",
+          text = "click here to send an email", 
+          subject = "Useful Information", 
+          body = glue::glue(
+          
+          "
+Hi,
+          
+
+Below you'll find the mpg column of the mtcars data frame: 
+
+{vec_pretty}
+
+Best regards
+            
+            "
+            
+          )),
+
+
+  use_mailtoR()
+
+
+)
+
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
+
+```
+
+
+![](man/figures/mailtoRexample4.gif)
+
+
+
+
 ## Code of Conduct
 
 Please note that the mailtoR project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
